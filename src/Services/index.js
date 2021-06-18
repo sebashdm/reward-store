@@ -1,4 +1,4 @@
-export function user({ usuarios, setUsuarios, fetched, setFetched, compra }) {
+export function user({ users, setUsers, fetched, setFetched, compra }) {
   const requestInit = {
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export function user({ usuarios, setUsuarios, fetched, setFetched, compra }) {
       .then((response) => response.json())
       .then((userList) => {
         setFetched(true);
-        setUsuarios({
+        setUsers({
           name: userList.name,
           points: userList.points,
           record: userList.redeemHistory,
@@ -27,14 +27,14 @@ export function user({ usuarios, setUsuarios, fetched, setFetched, compra }) {
         coin = userList.points;
         record = userList.redeemHistory;
 
-        products({ usuarios, setUsuarios, name, coin, compra, record });
+        products({ users, setUsers, name, coin, compra, record });
       });
   }
 }
 
 export function points({
-  usuarios,
-  setUsuarios,
+  users,
+  seusers,
   setFetched,
   numberVal,
   setNumber,
@@ -57,7 +57,7 @@ export function points({
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
       setFetched(true);
-      setUsuarios({
+      seusers({
         name: name,
         points: coin + numberVal,
         products: products,
@@ -78,7 +78,7 @@ export function points({
   request.send(JSON.stringify(body));
 }
 
-function products({ usuarios, setUsuarios, name, coin, compra, record }) {
+function products({ users, seusers, name, coin, compra, record }) {
   const requestInit = {
     headers: {
       "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function products({ usuarios, setUsuarios, name, coin, compra, record }) {
   fetch(endPoint, requestInit)
     .then((response) => response.json())
     .then((userList) => {
-      setUsuarios({
+      seusers({
         name: name,
         points: coin,
         products: userList,
@@ -104,7 +104,7 @@ function products({ usuarios, setUsuarios, name, coin, compra, record }) {
 export function canjear({
   setCompra,
   id,
-  setUsuarios,
+  seusers,
   name,
   points,
   products,
@@ -128,7 +128,7 @@ export function canjear({
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
       setFetched(true);
-      setUsuarios({
+      seusers({
         name: name,
         points: points - cost,
         products: products,
@@ -137,7 +137,7 @@ export function canjear({
 
       val = points - cost;
       history({
-        setUsuarios,
+        seusers,
         name,
         points,
         products,
@@ -156,7 +156,7 @@ export function canjear({
   request.send(JSON.stringify(body));
 }
 
-function history({ setUsuarios, name, products, val }) {
+function history({ seusers, name, products, val }) {
   const requestInit = {
     headers: {
       "Content-Type": "application/json",
@@ -171,7 +171,7 @@ function history({ setUsuarios, name, products, val }) {
     .then((response) => response.json())
     .then((userList) => {
       setTimeout(() => {
-        setUsuarios({
+        seusers({
           name: name,
           points: val,
           products: products,

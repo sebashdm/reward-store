@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Header from "./ContainerHeader";
+import Navbar from "./Navbar";
 import Page from "../ElectronicsGrid/Page";
 import { user } from "../../Services/index";
-import "../index.css";
 
 const ContainerHeader = () => {
   const [users, setUsers] = useState(0);
@@ -16,7 +15,7 @@ const ContainerHeader = () => {
   return (
     <>
       <div className="header">
-        <Header
+        <Navbar
           name={users.name}
           coin={users.points}
           users={users}
