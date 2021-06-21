@@ -6,7 +6,8 @@ import { user } from "../../Services/index";
 const ContainerHeader = () => {
   const [users, setUsers] = useState(0);
   const [fetched, setFetched] = useState(false);
-  const [buys, setBuy] = useState(false);
+  const [buys, setBuys] = useState(false);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     user({ users, setUsers, fetched, setFetched, buys });
@@ -26,7 +27,16 @@ const ContainerHeader = () => {
         />
       </div>
 
-      <Page />
+      <Page
+        name={users.name}
+        coin={users.points}
+        users={users}
+        setUsers={setUsers}
+        buys={buys}
+        setBuys={setBuys}
+        filter={filter}
+        setFilter={setFilter}
+      />
     </>
   );
 };

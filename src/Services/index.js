@@ -78,7 +78,7 @@ export function points({
   request.send(JSON.stringify(body));
 }
 
-function products({ users, seusers, name, coin, compra, record }) {
+function products({ users, setUsers, name, coin, compra, record }) {
   const requestInit = {
     headers: {
       "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function products({ users, seusers, name, coin, compra, record }) {
   fetch(endPoint, requestInit)
     .then((response) => response.json())
     .then((userList) => {
-      seusers({
+      setUsers({
         name: name,
         points: coin,
         products: userList,

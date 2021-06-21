@@ -1,5 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
+import Page from "../ElectronicsGrid/Page";
 
 const Navbar = ({
   name,
@@ -11,13 +12,17 @@ const Navbar = ({
   compra,
 }) => {
   return (
-    <Header as="h2" className="semanticHeader">
-      <Image
-        circular
-        src="https://react.semantic-ui.com/images/avatar/large/patrick.png"
-      />{" "}
-      <div className="user">{name}</div>
-    </Header>
+    <>
+      <div>
+        <Header as="h2" className="semanticHeader">
+          <Image
+            circular
+            src="https://react.semantic-ui.com/images/avatar/large/patrick.png"
+          />{" "}
+          <div className="user">{name}</div>
+        </Header>
+      </div>
+    </>
   );
 };
 
