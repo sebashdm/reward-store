@@ -22,12 +22,11 @@ const Product = ({
         <Card.Content>
           <Card.Header>{category}</Card.Header>
           <Card.Meta>
-            <span className="date">{name}</span>
+            <span>{name}</span>
           </Card.Meta>
           <Card.Meta>
-            <span className="date">
-              {" "}
-              <Icon name="money">Cost:{cost}</Icon>
+            <span>
+              <Icon name="bitcoin">{`Cost:${cost} Bitcoins`}</Icon>
             </span>
           </Card.Meta>
         </Card.Content>

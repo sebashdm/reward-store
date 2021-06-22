@@ -20,9 +20,9 @@ const ContainerHeader = () => {
           name={users.name}
           coin={users.points}
           users={users}
-          setUsuarios={setUsers}
+          setUsers={setUsers}
           products={users.products}
-          historial={users.record}
+          record={users.record}
           buys={buys}
         />
       </div>

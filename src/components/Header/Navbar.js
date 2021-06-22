@@ -1,16 +1,9 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import Page from "../ElectronicsGrid/Page";
+import Points from "./Points";
+import AddPointsModal from "../Modals/AddPointsModal";
 
-const Navbar = ({
-  name,
-  coin,
-  users,
-  setUsuarios,
-  products,
-  historial,
-  compra,
-}) => {
+const Navbar = ({ name, coin, users, setUsers, products, record, buys }) => {
   return (
     <>
       <div>
@@ -20,6 +13,20 @@ const Navbar = ({
             src="https://react.semantic-ui.com/images/avatar/large/patrick.png"
           />{" "}
           <div className="user">{name}</div>
+          <div className="points">
+            <Points coin={coin} />
+          </div>
+          <div className="btn-modal-points">
+            <AddPointsModal
+              users={users}
+              setUsers={setUsers}
+              name={name}
+              coin={coin}
+              products={products}
+              record={record}
+              buys={buys}
+            />
+          </div>
         </Header>
       </div>
     </>

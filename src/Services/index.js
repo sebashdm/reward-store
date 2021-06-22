@@ -34,9 +34,9 @@ export function user({ users, setUsers, fetched, setFetched, compra }) {
 
 export function points({
   users,
-  seusers,
+  setUsers,
   setFetched,
-  numberVal,
+  bitcoinNumber,
   setNumber,
   name,
   coin,
@@ -57,13 +57,13 @@ export function points({
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
       setFetched(true);
-      seusers({
+      setUsers({
         name: name,
-        points: coin + numberVal,
+        points: coin + bitcoinNumber,
         products: products,
         record: record,
       });
-      setNumber(numberVal);
+      setNumber(bitcoinNumber);
 
       console.log("Status:", this.status);
       console.log("Headers:", this.getAllResponseHeaders());
@@ -72,7 +72,7 @@ export function points({
   };
 
   var body = {
-    amount: numberVal,
+    amount: bitcoinNumber,
   };
 
   request.send(JSON.stringify(body));
