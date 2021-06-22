@@ -41,3 +41,19 @@
   left: 50%;
   font-family: SourceSansPro-Bold;
 }
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.card {
+  padding: 10px;
+}
+
+.card:hover {
+  font-weight: bold;
+}
