@@ -2,6 +2,7 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import Points from "./Points";
 import AddPointsModal from "../Modals/AddPointsModal";
+import RedeemRecordModal from "../Modals/RedeemRecordModal";
 
 const Navbar = ({ name, coin, users, setUsers, products, record, buys }) => {
   return (
@@ -26,6 +27,9 @@ const Navbar = ({ name, coin, users, setUsers, products, record, buys }) => {
               record={record}
               buys={buys}
             />
+          </div>
+          <div className="btn-modal-redeem">
+            <RedeemRecordModal users={users} />
           </div>
         </Header>
       </div>

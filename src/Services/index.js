@@ -101,10 +101,10 @@ function products({ users, setUsers, name, coin, compra, record }) {
     });
 }
 
-export function canjear({
+export function redeem({
   setCompra,
   id,
-  seusers,
+  setUsers,
   name,
   points,
   products,
@@ -128,7 +128,7 @@ export function canjear({
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
       setFetched(true);
-      seusers({
+      setUsers({
         name: name,
         points: points - cost,
         products: products,
@@ -137,7 +137,7 @@ export function canjear({
 
       val = points - cost;
       history({
-        seusers,
+        setUsers,
         name,
         points,
         products,
@@ -156,7 +156,7 @@ export function canjear({
   request.send(JSON.stringify(body));
 }
 
-function history({ seusers, name, products, val }) {
+function history({ setUsers, name, products, val }) {
   const requestInit = {
     headers: {
       "Content-Type": "application/json",
@@ -171,7 +171,7 @@ function history({ seusers, name, products, val }) {
     .then((response) => response.json())
     .then((userList) => {
       setTimeout(() => {
-        seusers({
+        setUsers({
           name: name,
           points: val,
           products: products,

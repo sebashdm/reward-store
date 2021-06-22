@@ -69,3 +69,19 @@
   display: flex;
   padding: 11px;
 }
+
+.disble-header-text {
+  padding-top: 5%;
+}
+.card-coin-icon {
+  cursor: pointer;
+}
+
+.card-buy-icon {
+  margin-left: 80%;
+  cursor: pointer;
+}
+
+.btn-modal-redeem {
+  padding-top: 15px;
+}
