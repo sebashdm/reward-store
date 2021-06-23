@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Header, Image, Modal, Card } from "semantic-ui-react";
+import { Button, Image, Modal, Card } from "semantic-ui-react";
 import buyblue from "../../images/buy-blue.svg";
 import happy from "../../images/happy.png";
 import { redeem } from "../../Services/index";
@@ -54,14 +54,13 @@ const AvailableToBuy = ({
       <Modal.Content image>
         <Image size="medium" src={happy} wrapped />
         <Modal.Description>
-          <Header>redeemed product</Header>
           <div className="card">
             <Card color="blue">
               <Image src={image} wrapped ui={false} />
               <Card.Content>
-                <Card.Header>{category}</Card.Header>
+                <Card.Header>{nameProduct}</Card.Header>
                 <Card.Meta>
-                  <span className="date">{nameProduct}</span>
+                  <span className="date">{category}</span>
                 </Card.Meta>
               </Card.Content>
             </Card>
@@ -71,11 +70,10 @@ const AvailableToBuy = ({
       <Modal.Actions>
         <Button
           color="blue"
-          content="Amazing!"
+          content="Amazing"
           labelPosition="right"
           icon="checkmark"
           onClick={() => setOpen(false)}
-          positive
         />
       </Modal.Actions>
     </Modal>

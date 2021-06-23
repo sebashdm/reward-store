@@ -8,7 +8,7 @@ const Navbar = ({ name, coin, users, setUsers, products, record, buys }) => {
   return (
     <>
       <div>
-        <Header as="h2" className="semanticHeader">
+        <Header as="h2">
           <Image
             circular
             src="https://react.semantic-ui.com/images/avatar/large/patrick.png"

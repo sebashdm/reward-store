@@ -20,8 +20,8 @@ const Product = ({
   return (
     <div className="card">
       <Card color="blue">
-        <Card.Content extra>
-          <span className="span-semanticCard">
+        <Card.Content>
+          <span>
             {cost > points ? (
               <DisableToBuy cost={cost} points={points} />
             ) : (
@@ -42,16 +42,15 @@ const Product = ({
           </span>
         </Card.Content>
         <Image src={image} wrapped ui={false} />
-        <Card.Content>
-          <Card.Header>{category}</Card.Header>
-          <Card.Meta>
-            <span>{name}</span>
-          </Card.Meta>
-          <Card.Meta>
-            <span>
-              <Icon name="bitcoin">{`Cost:${cost} Bitcoins`}</Icon>
-            </span>
-          </Card.Meta>
+        <Card.Content extra>
+          <Card.Header>{name}</Card.Header>
+          <Card.Description>
+            {category}
+            <h4>
+              <Icon name="bitcoin" />
+              {`${cost}`}
+            </h4>
+          </Card.Description>
         </Card.Content>
       </Card>
     </div>
