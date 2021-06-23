@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/reward-store/static/css/main.8144b0ca.chunk.css",
+    "main.js": "/reward-store/static/js/main.8745075e.chunk.js",
+    "main.js.map": "/reward-store/static/js/main.8745075e.chunk.js.map",
+    "runtime-main.js": "/reward-store/static/js/runtime-main.37488c91.js",
+    "runtime-main.js.map": "/reward-store/static/js/runtime-main.37488c91.js.map",
+    "static/css/2.038e4bf1.chunk.css": "/reward-store/static/css/2.038e4bf1.chunk.css",
+    "static/js/2.c712a254.chunk.js": "/reward-store/static/js/2.c712a254.chunk.js",
+    "static/js/2.c712a254.chunk.js.map": "/reward-store/static/js/2.c712a254.chunk.js.map",
+    "index.html": "/reward-store/index.html",
+    "static/css/2.038e4bf1.chunk.css.map": "/reward-store/static/css/2.038e4bf1.chunk.css.map",
+    "static/css/main.8144b0ca.chunk.css.map": "/reward-store/static/css/main.8144b0ca.chunk.css.map",
+    "static/js/2.c712a254.chunk.js.LICENSE.txt": "/reward-store/static/js/2.c712a254.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/reward-store/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/buy-blue.c5c4f01c.svg": "/reward-store/static/media/buy-blue.c5c4f01c.svg",
+    "static/media/coin.b8bc711d.svg": "/reward-store/static/media/coin.b8bc711d.svg",
+    "static/media/compras.8dab053e.png": "/reward-store/static/media/compras.8dab053e.png",
+    "static/media/cry.7fca445d.png": "/reward-store/static/media/cry.7fca445d.png",
+    "static/media/happy.13b43fe0.png": "/reward-store/static/media/happy.13b43fe0.png",
+    "static/media/main.b6f067c6.png": "/reward-store/static/media/main.b6f067c6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37488c91.js",
+    "static/css/2.038e4bf1.chunk.css",
+    "static/js/2.c712a254.chunk.js",
+    "static/css/main.8144b0ca.chunk.css",
+    "static/js/main.8745075e.chunk.js"
+  ]
+}
